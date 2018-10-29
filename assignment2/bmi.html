@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>BMI_Calculator</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bmistyle.css">
+</head>
+
+<head>
+  <script>
+    var BMI = {};
+    BMI.getBMI = function (a, b) {
+      var bmi = b / ((a / 100) * (a / 100));
+      return bmi;
+    };
+    BMI.idealweight = function (a) {
+      var x = (a - 100) * 0.9;
+      return x;
+    };
+    function Cal(form) {
+      var a = eval(form.height.value);
+      var b = eval(form.weight.value);
+      // var bmi = eval(form.BMI.value);
+      var bmiValue = BMI.getBMI(a, b);
+      BMI.disp_alert(bmiValue);
+      document.getElementById('result').style.display = 'block';
+      document.getElementById('weight').innerText = BMI.idealweight(a);
+      document.getElementById('bmi').innerText = bmiValue;
+      // form.IW.value = BMI.idealweight(a);
+      // form.BMI.value = bmiValue;
+    }
+    BMI.disp_alert = function (bmi) {
+      if (bmi < 18.5) {
+        alert("You are too thin! You have too eat more.");
+      }
+      else if (bmi >= 18.5 && bmi < 25) {
+        alert("Your weight is normal. Keep it!");
+      }
+      else if (bmi >= 25 && bmi < 30) {
+        alert("Your weight is a bit heavy. You have to start losing weight!");
+      }
+      else {
+        alert("For health, please start losing weight!");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>BMI Calculator</h1>
+  <p class="demo">The body mass index (BMI) is a value derived from
+    the mass (weight) and height of an individual. The BMI is defined as the body mass divided by the square of the body height, and is universally expressed in units of kg/m<sup>2, resulting from mass in kilograms and height in meters.(source:Wikipedia)
+    <form method=post>
+      Your Height(cm):<input type="text" name="height"><br>
+      <br />
+      Your Weight(kg):<input type="text" name="weight"><br>
+      <br />
+      <input type="button" value="Start Calculating" class="btn btn-danger" onclick="Cal(this.form)">
+      <br />
+    </form>
+    <div id="result" style="display: none">
+      Your healthy Weight: <span id="weight"></span>
+      <br />
+      Your BMI: <span id="bmi"></span>
+    </div>
+
+
+</body>
+
+</html>
