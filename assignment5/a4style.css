@@ -1,0 +1,45 @@
+.header-img{
+    height: 450px;
+    position: relative;
+    width: 100%;
+}
+.header-img img{
+    width: 100%;
+
+}
+.header-content{
+    background: #b87f48;
+    color: #fff;
+    height: 450px;
+    padding-top: 120px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+.header-content h2{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.header-content p{
+    padding: 0px 150px;
+}
+.header-content:before{
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 125px;
+    top: -50px;
+    left: 0;
+    background:#b87f48;
+    transform: skewY(10deg);
+}
+.header-content:after{
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 125px;
+    top: -50px;
+    right: 0;
+    background:#b87f48;
+    transform: skewY(-10deg);
+}
