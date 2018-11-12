@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- PAGE settings -->
+  <link rel="icon" href="https://templates.pingendo.com/assets/Pingendo_favicon.ico">
+  <title>Restaurant Flat - Pingendo template</title>
+  <meta name="description" content="Free Bootstrap 4 Pingendo Flat template for restaurant and food">
+  <meta name="keywords" content="Pingendo restaurant food flat free template bootstrap 4">
+  <!-- CSS dependencies -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="flat.css" type="text/css">
+  <!-- Script: Make my navbar transparent when the document is scrolled to top -->
+  <script src="js/navbar-ontop.js"></script>
+  <!-- Script: Animated entrance -->
+  <script src="js/animate-in.js"></script>
+  <title>Dogs from Europe</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.js"></script>
+  <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js">
+  </script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md bg-primary navbar-light fixed-top">
+    <div class="container">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar3SupportedContent" aria-controls="navbar3SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-center" id="navbar3SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#">
+              <b>HOMEPAGE</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Cover -->
+  <div class="align-items-center d-flex py-5 cover section-primary" style="	background-image: url(&quot;pics/cover_light.jpg&quot;);	background-position: top left;	background-size: 150%;	background-repeat: repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 align-self-center text-lg-left text-center">
+          <h1 class="mb-0 mt-4 display-4">DOGS IN EUROPE</h1>
+          <p class="mb-5">COM5961 ASSIGNMENT6</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Intro -->
+  <div class="py-5 text-white" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 align-self-center p-4 text-left">
+          <p class="mb-5">Archaeologists believe that the earliest dogs came from Europe. If you have a certain understanding of dogs, you will know that Europe is indeed the birthplace of many expensive dogs.<br>Click on the coordinates on the map to see the famous local breeds and learn more through Wikipedia.</p>
+        </div>
+        <div id="map" style="width: 600px; height: 400px"></div>
+    <script>
+        var mapboxTiles = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>', maxZoom: 18,})
+        var map = L.map('map')
+              .addLayer(mapboxTiles)
+              .setView([48.856578, 2.351828], 4);
+        var marker = L.marker([52.52, 13.38], {draggable: true})
+              .bindPopup( '<a href="https://zh.wikipedia.org/wiki/%E6%8B%B3%E5%B8%AB%E7%8A%AC" target="_blank">Boxer</a>')
+              .addTo(map);
+        var marker = L.marker([51.5072, -0.1275], {draggable: true})
+              .bindPopup( '<a href="https://zh.wikipedia.org/wiki/%E9%AC%A5%E7%89%9B%E7%8D%92" target="_blank">Bullmastiff</a>')
+              .addTo(map);
+        var marker = L.marker([55.953056, -3.188889], {draggable: true})
+              .bindPopup( '<a href="https://zh.wikipedia.org/wiki/%E8%A5%BF%E9%AB%98%E5%9C%B0%E7%99%BD%E3%B9%B4" target="_blank">West Highland White Terrier</a>')
+              .addTo(map);
+        var marker = L.marker([48.856578, 2.351828], {draggable: true})
+              .bindPopup( '<a href="https://zh.wikipedia.org/wiki/%E6%AF%94%E7%86%8A%E7%8A%AC" target="_blank">Bichon Frise</a>')
+              .addTo(map);
+        var marker = L.marker([40.463667, -3.74922], {draggable: true})
+              .bindPopup( '<a href="https://zh.wikipedia.org/wiki/%E8%9D%B4%E8%9D%B6%E7%8A%AC" target="_blank">Papillon</a>')
+              .addTo(map);
+    </script>
+       </div>
+      </div>
+    </div>
+  </div>
+  <!-- Gallery -->
+  <div class="section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9597.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9598.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9599.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9600.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9601.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9602.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9603.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9604.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9605.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9606.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img src="pics/IMG_9607.jpg" class="img-fluid"> </div>
+        <div class="p-0 col-md-2 col-4">
+          <img class="img-fluid" src="pics/IMG_9608.jpg"> </div>
+      </div>
+    </div>
+  </div>
+  <!-- Menu -->
+  <!-- Carousel reviews -->
+  <!-- Carousel venue -->
+  <!-- Events -->
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="m-0 text-center">We gladly invite you to our happenings.</p>
+          <h2 class="mb-4 text-primary text-center">Upcoming events</h2>
+          <div class="row">
+            <div class="col-md-4 p-3">
+              <img class="img-fluid d-block w-100 mb-3" src="pics/images.jpeg">
+              <p class="lead text-muted mb-1" contenteditable="true">18th Nov, 2018</p>
+              <h5 class="text-dark">Free Beauty Experience</h5>
+              <p class="mb-3">Pet grooming salon free exerpience. On-site sales of pet grooming supplies. Limited places.</p>
+              <a href="#" class="btn btn-outline-primary">
+                <b class="">Book now!</b>
+              </a>
+            </div>
+            <div class="col-md-4 p-3">
+              <img class="img-fluid d-block w-100 mb-3" src="pics/d2253152.jpg">
+              <p class="lead text-muted mb-1">9th Dec, 2018</p>
+              <h5 class="">
+                <b>Variety Appraisal Lecture</b></h5>
+              <p class="mb-3">Professor of the University of Tokyo came to the club to give a lecture on the identification experience of dogs.</p>
+              <a href="#" class="btn btn-outline-primary">
+                <b class="">Go to event</b>
+              </a>
+            </div>
+            <div class="col-md-4 p-3">
+              <img class="img-fluid d-block w-100 mb-3" src="pics/gC5_247BfcUuchrTKpGoAc12-457CoXNDrQRdw60EXc.jpeg">
+              <p class="lead text-muted mb-1">1st Jan, 2019</p>
+              <h5 class="">
+                <b>New Year's Party</b></h5>
+              <p class="mb-3">New Year's party with dogs. Registration fee is needed. There will be a lottery session on the party.</p>
+              <a href="#" class="btn btn-outline-primary">
+                <b class="">Read more</b>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Book section -->
+  <!-- Footer -->
+  <div class="text-center bg-dark pt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 p-3">
+          <h2 class="mb-4">Created by</h2>
+          <p class="m-0">SUN Guanlin</p>
+          <p>1155115053</p>
+        </div>
+        <div class="col-md-4 p-3">
+          <h2 class="mb-4">Contact</h2>
+          <p class="m-0">
+            <a href="tel:+246 - 542 550 5462" class="text-white">+852-&nbsp;</a>60478382</p>
+          <p>sunguanlin2020@gmail.com</p>
+        </div>
+        <div class="col-md-4 p-3">
+          <h2 class="mb-4">Location</h2>
+          <p>Hong Kong<br>the Chinese University of Hong Kong</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-muted">© Copyright 2018 Pingendo - All rights reserved. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript dependencies -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <!-- Script: Smooth scrolling between anchors in the same page -->
+  <script src="js/smooth-scroll.js"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16"></pingendo>
+</body>
+
+</html>
