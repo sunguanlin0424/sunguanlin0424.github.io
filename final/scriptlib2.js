@@ -107,12 +107,12 @@ $(document).ready(function(){
 
                 var chart = c3.generate({
                      data: {
-                         columns: table2_dataSet,
+                         columns: table1_dataSet,
                          type : 'bar'
                      },
                      axis: {
-                       x: {label: 'Stage'},
-                       y: {label: '# of Entries'}
+                       x: {label: '城市'},
+                       y: {label: '景点数量'}
                      },
                      bar: {
                          title: "Tasks for Each Stage:",
