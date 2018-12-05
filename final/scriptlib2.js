@@ -82,13 +82,13 @@ $(document).ready(function(){
          var table2_items = [];
          var i = 0;
          var airtable_read_endpoint =
-         "https://api.airtable.com/v0/appM38HXlEVhxmnqx/Stage?api_key=keyTcsTzckqyBTlk8&view=Grid%20view";
+         "https://api.airtable.com/v0/appJa4i7xGh9cKKJi/Table%201?api_key=key0eGGPlI2X82Vz3";
          var table2_dataSet = [];
          $.getJSON(airtable_read_endpoint, function(result) {
                 $.each(result.records, function(key,value) {
                     table2_items = [];
-                        table2_items.push(value.fields.Name);
-                        table2_items.push(value.fields.Total_Entries);
+                        table2_items.push(value.fields.城市);
+                        table2_items.push(value.fields.景点数量);
                         table2_dataSet.push(table2_items);
                         console.log(table2_items);
                  }); // end .each
@@ -98,9 +98,9 @@ $(document).ready(function(){
                     retrieve: true,
                     ordering: false,
                     columns: [
-                        { title: "Name",
+                        { title: "城市",
                           defaultContent:""},
-                        { title: "Total Entries",
+                        { title: "景点数量",
                           defaultContent:""},
                     ] // rmf columns
                 } ); // end dataTable
