@@ -79,46 +79,7 @@ $(document).ready(function(){
             } );
        }); // end .getJSON
 
-         var table2_items = [];
-         var i = 0;
-         var airtable_read_endpoint =
-         "https://api.airtable.com/v0/appJa4i7xGh9cKKJi/Table%201?api_key=key0eGGPlI2X82Vz3";
-         var table2_dataSet = [];
-         $.getJSON(airtable_read_endpoint, function(result) {
-                $.each(result.records, function(key,value) {
-                    table2_items = [];
-                        table2_items.push(value.fields.城市);
-                        table2_items.push(value.fields.景点数量);
-                        table2_dataSet.push(table2_items);
-                        console.log(table2_items);
-                 }); // end .each
-                 console.log(table2_dataSet);
-                $('#table2').DataTable( {
-                    data: table2_dataSet,
-                    retrieve: true,
-                    ordering: false,
-                    columns: [
-                        { title: "城市",
-                          defaultContent:""},
-                        { title: "景点数量",
-                          defaultContent:""},
-                    ] // rmf columns
-                } ); // end dataTable
-
-                var chart = c3.generate({
-                     data: {
-                         columns: table1_dataSet,
-                         type : 'bar'
-                     },
-                     axis: {
-                       x: {label: '城市'},
-                       y: {label: '景点数量'}
-                     },
-                     bar: {
-                         title: "Tasks for Each Stage:",
-                     }
-                 });
-
+        
           }); // end .getJSON
        }); // end button
 
