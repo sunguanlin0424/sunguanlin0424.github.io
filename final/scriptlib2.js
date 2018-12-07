@@ -79,10 +79,6 @@ $(document).ready(function(){
             } );
        }); // end .getJSON
 
-        
-          }); // end .getJSON
-       }); // end button
 
-        // $.getJSON('http://localhost/d756a/data_export.json/Computer+TV', function(obj) {
 
 }); // document ready
